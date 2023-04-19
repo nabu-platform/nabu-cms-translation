@@ -1,0 +1,6 @@
+<structure collectionName="translationEnvironments" name="translationEnvironment">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field name="name" type="java.lang.String"/>
+    <field foreignKey="nabu.cms.translation.database.types.translationProject:id" name="translationProjectId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="If not filled in, you are using the &quot;LATEST&quot;" foreignKey="nabu.cms.translation.database.types.translationProjectVersion:id" minOccurs="0" name="translationProjectVersionId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+</structure>

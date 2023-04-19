@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2023-03-06T13:54:23.342+01:00" lastModified="2023-03-07T09:02:55.693+01:00" leaf="true" version="29">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.services.create</references>
+    <references>nabu.services.jdbc.Services.selectDynamic</references>
+    <references>nabu.cms.translation.database.types.translationLanguage</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.services.list</references>
+    <references>nabu.services.jdbc.Services.page</references>
+    <references>java.util.UUID</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.services.list</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic.types.output</references>
+    <references>nabu.cms.translation.manage.term.termOutputList</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic.services.list</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.types.output</references>
+    <references>nabu.cms.translation.manage.term.topicSql</references>
+</node>

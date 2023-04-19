@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2023-04-19T15:51:48.301+02:00" lastModified="2023-04-19T16:03:58.355+02:00" leaf="true" version="11">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.manage.crud.translationLanguage.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationLanguage.services.create</references>
+    <references>nabu.cms.core.types.emodel.core.MasterDataCategory</references>
+    <references>nabu.cms.core.services.masterdata.category.get</references>
+</node>

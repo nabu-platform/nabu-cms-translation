@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <path>/</path>
+    <webFragments>nabu.cms.translation.manage.crud.translationBundle</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationProject</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationProjectEnvironment</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationProjectVersion</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationTerm</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationTermInstance</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationTermLog</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationTermTopic</webFragments>
+    <webFragments>nabu.cms.translation.manage.term.list</webFragments>
+    <webFragments>nabu.cms.translation.manage.topic.create</webFragments>
+    <webFragments>nabu.cms.translation.manage.topic.list</webFragments>
+    <webFragments>nabu.cms.translation.manage.language.create</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationLanguage.services.list</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationLanguage.services.update</webFragments>
+</webModule>

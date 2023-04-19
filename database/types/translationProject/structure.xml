@@ -1,0 +1,1 @@
+<structure collectionName="translationProjects" duplicate="id,created,modified" name="translationProject" superType="nabu.cms.core.types.emodel.core.Node"/>

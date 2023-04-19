@@ -1,0 +1,7 @@
+<structure interface="nabu.cms.translation.manage.term.list:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" maxOccurs="unbounded" minOccurs="0" name="terms"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="translations"/>
+    <field foreignKey="nabu.cms.translation.database.types.translationLanguage:id" maxOccurs="unbounded" name="pendingLanguageIds" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+</structure>

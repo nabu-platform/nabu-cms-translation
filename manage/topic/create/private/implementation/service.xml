@@ -1,0 +1,58 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="7ec5ba7aa30d46d984a36a5c45ff0b2b"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="992b8d80f2884f62a98409961bdc7d4c"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="32a4d15651424b6fa9a0f4c03fb1258b"
+				serviceId="nabu.cms.core.services.masterdata.entry.get"
+				resultName="result5e6ef2b176464863821cc8ca421c24c7"
+				temporaryMapping="true"
+				x="330"
+				y="59"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9a6c27e774154a6e8fd8ecc77b76ca63"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>topics</from>
+				<to>category</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="cb24da16cad94fb487d2f056de4a8a43"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/bundleId</from>
+				<to>ownerId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="0257835126164b1a8ca452d3b28e3617"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/topic</from>
+				<to>name</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="09b4f43505cf4b838bb44ef2b9e690c5"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result5e6ef2b176464863821cc8ca421c24c7/masterDataEntry</from>
+			<to>output/content</to>
+		</steps>
+	</steps>
+</sequence>

@@ -1,0 +1,20 @@
+<structure collectionName="translationTerms" comment="When translating stuff like masterdata, the &quot;contextId&quot; is the actual id of the masterdata entry.&#10;The &quot;term&quot; is the field we want to translate (e.g. name by default, but in the future we might want to translate description etc" name="translationTerm">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field name="modified" timezone="UTC" type="java.util.Date"/>
+    <field comment="The actual term to be translated" name="term" type="java.lang.String"/>
+    <field comment="A short descriptive display name for the term." minOccurs="0" name="label" type="java.lang.String"/>
+    <field comment="A general description of this term, it can be multi-line" minOccurs="0" name="description" type="java.lang.String"/>
+    <field comment="The default value is often the term itself, but there might be another default value" minOccurs="0" name="defaultValue" type="java.lang.String"/>
+    <field foreignKey="nabu.cms.translation.database.types.translationBundle:id" name="translationBundleId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="You can create synonyms, for example if multiple terms actually mean the same.This could be down to copy differences or for example masterdata which can usually be identified by both the id and name.From the translating perspective, you need to know both" foreignKey="nabu.cms.translation.database.types.translationTerm:id" minOccurs="0" name="synonymousToId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="The environment it was created in" foreignKey="nabu.cms.translation.database.types.translationEnvironment:id" minOccurs="0" name="environmentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="You can lock a term to prevent further translation" minOccurs="0" name="locked" timezone="UTC" type="java.util.Date"/>
+    <field comment="You can deprecate a term for future removal" minOccurs="0" name="deprecated" timezone="UTC" type="java.util.Date"/>
+    <field comment="When you actually delete it" minOccurs="0" name="inactivated" timezone="UTC" type="java.util.Date"/>
+    <field comment="for context" foreignKey="nabu.cms.attachment.types.model.attachments.NodeAttachment:id" minOccurs="0" name="attachmentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.cms.core.types.emodel.core.MasterDataEntry:id" minOccurs="0" name="translationTermTypeId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="For instance a masterdata id to indicate this is a translation for that. Or an operational instance of something like faq." minOccurs="0" name="instanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="Whether or not this is an operational translation. If operationl, you can use the context id to store any identifier you need." name="operational" type="java.lang.Boolean"/>
+    <field comment="You can choose one of the default languages to set on this term if it is indeed already in a language" foreignKey="nabu.cms.translation.database.types.translationLanguage:id" minOccurs="0" name="translationLanguageId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+</structure>

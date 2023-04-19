@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2022-12-05T08:58:08.315+01:00" lastModified="2023-04-19T09:44:42.136+02:00" leaf="true" version="8">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.core.types.emodel.core.MasterDataEntry</references>
+    <references>java.lang.Double</references>
+    <references>java.lang.Boolean</references>
+</node>

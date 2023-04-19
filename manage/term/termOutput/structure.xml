@@ -1,0 +1,5 @@
+<structure name="termOutput" superType="nabu.cms.translation.manage.crud.translationTerm.types.output">
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" maxOccurs="unbounded" minOccurs="0" name="topics"/>
+    <structure collectionName="translationTermInstances" comment="The translations that are currently active for this term in the different requested languages. These can not be edited and are informational-only" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="activeTranslations"/>
+    <structure collectionName="translationTermInstances" comment="The translations that are currently pending verification for this term in the different requested languages. These can be edited." definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="pendingTranslations"/>
+</structure>

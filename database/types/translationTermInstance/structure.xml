@@ -1,0 +1,14 @@
+<structure collectionName="translationTermInstances" name="translationTermInstance">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field name="modified" timezone="UTC" type="java.util.Date"/>
+    <field foreignKey="nabu.cms.translation.database.types.translationTerm:id" name="translationTermId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field minOccurs="0" name="translation" type="java.lang.String"/>
+    <field foreignKey="nabu.cms.translation.database.types.translationLanguage:id" name="languageId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.cms.core.types.emodel.core.User:id" minOccurs="0" name="assignedToId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="Every time we &quot;verify&quot; a translation, we start a new entry with an incremented version for further manipulation." name="version" type="java.lang.Long"/>
+    <field comment="Whether or not this translation has been verified" minOccurs="0" name="verified" timezone="UTC" type="java.util.Date"/>
+    <field comment="When a translation is deprecated in favor of a new translation, we mark the date. This allows us to get translations &quot;at a certain point in time&quot;;" minOccurs="0" name="deprecated" timezone="UTC" type="java.util.Date"/>
+    <field comment="A translation might be disabled WITHIN the active time range because for example a hotfix is available." name="disabled" type="java.lang.Boolean"/>
+    <field comment="The environment this was last modified in, it might indicate a hotfix" foreignKey="nabu.cms.translation.database.types.translationEnvironment:id" minOccurs="0" name="environmentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+</structure>

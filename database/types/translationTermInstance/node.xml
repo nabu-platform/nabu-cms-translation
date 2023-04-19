@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2022-12-05T08:54:06.597+01:00" lastModified="2023-02-10T15:36:48.061+01:00" leaf="true" version="17">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>java.util.UUID</references>
+    <references>java.util.Date</references>
+    <references>nabu.cms.translation.database.types.translationTerm</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.translation.database.types.translationLanguage</references>
+    <references>nabu.cms.core.types.emodel.core.User</references>
+    <references>java.lang.Long</references>
+    <references>java.lang.Boolean</references>
+    <references>nabu.cms.translation.database.types.translationEnvironment</references>
+</node>

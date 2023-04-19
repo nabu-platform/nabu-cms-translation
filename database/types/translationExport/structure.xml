@@ -1,0 +1,9 @@
+<structure collectionName="translationExports" name="translationExport">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field foreignKey="nabu.cms.translation.database.types.translationBundle:id" name="translationBundleId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="The name of this export" name="name" type="java.lang.String"/>
+    <field comment="The service to use for exporting" minOccurs="0" name="exportServiceId" type="java.lang.String"/>
+    <field comment="Any configurable properties for this service" minOccurs="0" name="exportServiceProperties" type="java.lang.String"/>
+    <field minOccurs="0" name="lastExported" timezone="UTC" type="java.util.Date"/>
+</structure>

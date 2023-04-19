@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2022-12-05T15:22:04.635+01:00" lastModified="2023-04-19T16:05:25.450+02:00" leaf="true" version="22">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.manage.crud.translationBundle</references>
+    <references>nabu.cms.translation.manage.crud.translationProject</references>
+    <references>nabu.cms.translation.manage.crud.translationProjectEnvironment</references>
+    <references>nabu.cms.translation.manage.crud.translationProjectVersion</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance</references>
+    <references>nabu.cms.translation.manage.crud.translationTermLog</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic</references>
+    <references>nabu.cms.translation.manage.term.list</references>
+    <references>nabu.cms.translation.manage.topic.create</references>
+    <references>nabu.cms.translation.manage.topic.list</references>
+    <references>nabu.cms.translation.manage.language.create</references>
+    <references>nabu.cms.translation.manage.crud.translationLanguage.services.list</references>
+    <references>nabu.cms.translation.manage.crud.translationLanguage.services.update</references>
+</node>

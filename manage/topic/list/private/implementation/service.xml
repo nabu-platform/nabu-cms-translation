@@ -1,0 +1,165 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="82d96168dbcf439694a58e40bf3922ce"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="1d2c161098f9476e9d603dff9097a8da"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="8f52a09e2b27429dbe9eb4cfe60b57df"
+				serviceId="nabu.cms.core.crud.masterDataCategory.services.list"
+				resultName="resultbbb4cfbec8574e0eba54c0d75871b442"
+				temporaryMapping="true"
+				x="216"
+				y="51"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="844a75889d464f03b13ee0a7b75d9010"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/bundleId</from>
+				<to>filter/ownerId[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9c84c8e15ef54aa6b252e4d6829e8335"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>topics</from>
+				<to>filter/name[0]</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="e55aebf248d041d6a21f2e2f9994d64b"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultbbb4cfbec8574e0eba54c0d75871b442/results[0]</from>
+			<to>category</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="5e9800f94f064d978f33e5f2c53c1ebd"
+			label="!category"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="2daa191d20aa408fbc5f2c31d2c7b6a2"
+				serviceId="nabu.cms.core.crud.masterDataCategory.services.create"
+				resultName="result8c5c861965a64407954f7147d86373e9"
+				temporaryMapping="true"
+				x="152"
+				y="52"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="219d765846af426caa0857142798aab1"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>topics</from>
+				<to>instance/name</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7053458a6a0243bd988ee987d3bdf5b6"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/bundleId</from>
+				<to>instance/ownerId</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="84afa371995849c5a73b1aa07c12d8ed"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result8c5c861965a64407954f7147d86373e9/created</from>
+			<to>category</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="07c361e9d78c40e4b167da979a02b272"
+			lineNumber="4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="330f0e0a26724b1fbe864004a4f5b175"
+				serviceId="nabu.cms.core.v2.manage.masterdata.crud.masterDataEntry.services.list"
+				resultName="resultf2e7352dc30f480ca4f4b46f6f83722e"
+				temporaryMapping="true"
+				x="156"
+				y="37"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="306d8be626ec4ece943de8f6310338ce"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/limit</from>
+				<to>limit</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="96ff3201b8d64a389143809fcf4978d3"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/offset</from>
+				<to>offset</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="252672ab75f84fa0b85384a7159576f6"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/orderBy</from>
+				<to>orderBy</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="8d07cd5c7dee44289704af49c7ad9379"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>category/id</from>
+				<to>filter/masterDataCategoryId[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9def42c1b673442ab28da27c0a6afd86"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/q</from>
+				<to>filter/q</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="8f81dcebe73f4bd59f6bf2394454bdae"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultf2e7352dc30f480ca4f4b46f6f83722e</from>
+			<to>output/content</to>
+		</steps>
+	</steps>
+</sequence>

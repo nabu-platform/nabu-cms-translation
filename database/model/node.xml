@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2022-12-05T08:43:19.187+01:00" lastModified="2023-04-19T09:35:45.613+02:00" leaf="true" version="108">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.database.types.translationTerm</references>
+    <references>nabu.cms.translation.database.types.translationTermInstance</references>
+    <references>nabu.cms.translation.database.types.translationProject</references>
+    <references>nabu.cms.translation.database.types.translationTermLog</references>
+    <references>nabu.cms.translation.database.types.translationBundle</references>
+    <references>nabu.cms.translation.database.types.translationProjectVersion</references>
+    <references>nabu.cms.translation.database.types.translationLanguage</references>
+    <references>nabu.cms.translation.database.types.translationEnvironment</references>
+    <references>nabu.cms.translation.database.types.translationTermTopic</references>
+    <references>nabu.cms.translation.database.types.translationExport</references>
+    <references>nabu.cms.translation.database.types.translationExportTopic</references>
+    <references>nabu.cms.translation.database.types.translationExportInstance</references>
+</node>

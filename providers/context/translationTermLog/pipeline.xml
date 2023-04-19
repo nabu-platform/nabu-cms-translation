@@ -1,0 +1,6 @@
+<structure interface="nabu.cms.core.interfaces.contextResolver" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="translationTermLogs" definition="nabu.cms.translation.manage.crud.translationTermLog.types.output" name="log"/>
+    <structure collectionName="translationTerms" definition="nabu.cms.translation.manage.crud.translationTerm.types.output" name="term"/>
+</structure>

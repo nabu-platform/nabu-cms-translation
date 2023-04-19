@@ -1,0 +1,5 @@
+<structure interface="$self:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="masterDataCategories" definition="nabu.cms.core.crud.masterDataCategory.types.output" minOccurs="0" name="category"/>
+</structure>

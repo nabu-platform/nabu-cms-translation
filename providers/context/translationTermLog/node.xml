@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-12-05T17:29:09.527+01:00" lastModified="2022-12-06T08:45:43.467+01:00" leaf="true" version="4">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties>
+        <property key="context">translationTermLog</property>
+    </properties>
+    <references>nabu.cms.core.types.model.core.Node</references>
+    <references>nabu.cms.core.interfaces.contextResolver</references>
+    <references>nabu.cms.translation.manage.crud.translationTermLog.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationTermLog.services.get</references>
+    <references>nabu.cms.core.crud.node.services.get</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.types.output</references>
+    <references>nabu.cms.core.types.emodel.core.Node</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.services.get</references>
+    <references>java.lang.String</references>
+</node>

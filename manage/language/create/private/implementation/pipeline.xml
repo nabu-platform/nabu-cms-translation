@@ -1,0 +1,5 @@
+<structure interface="nabu.cms.translation.manage.language.create:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="masterDataCategories" definition="nabu.cms.core.types.emodel.core.MasterDataCategory" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011AD" name="category"/>
+</structure>

@@ -1,0 +1,4 @@
+<structure name="termOutputList">
+    <structure definition="nabu.cms.translation.manage.term.termOutput" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <structure definition="be.nabu.eai.module.services.crud.Page" minOccurs="0" name="page"/>
+</structure>
