@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <webFragments>nabu.cms.translation.manage.transport.list</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationTransportTopic.services.create</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationTransportTopic.services.delete</webFragments>
+    <webFragments>nabu.cms.translation.manage.crud.translationTransport.services.create</webFragments>
+    <webFragments>nabu.cms.translation.manage.transport.update</webFragments>
+    <webFragments>nabu.cms.translation.manage.transport.run</webFragments>
+</webModule>

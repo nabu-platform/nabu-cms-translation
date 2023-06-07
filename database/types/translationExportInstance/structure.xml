@@ -1,9 +1,0 @@
-<structure collectionName="translationExportInstances" name="translationExportInstance">
-    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
-    <field foreignKey="nabu.cms.translation.database.types.translationExport:id" name="translationExportId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
-    <field name="started" timezone="UTC" type="java.util.Date"/>
-    <field minOccurs="0" name="stopped" type="java.util.Date"/>
-    <field comment="Freestyle comment for the user" minOccurs="0" name="comment" type="java.lang.String"/>
-    <field comment="Any output returned by the export service" minOccurs="0" name="exportServiceOutput" type="java.lang.String"/>
-    <field comment="If it failed" minOccurs="0" name="error" type="java.lang.String"/>
-</structure>

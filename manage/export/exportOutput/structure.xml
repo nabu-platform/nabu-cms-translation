@@ -1,4 +1,0 @@
-<structure name="exportOutput" restrict="exportServiceProperties" superType="nabu.cms.translation.manage.crud.translationExport.types.output">
-    <structure collectionName="translationExportTopics" definition="nabu.cms.translation.manage.crud.translationExportTopic.types.output" maxOccurs="unbounded" minOccurs="0" name="topics"/>
-    <structure definition="nabu.utils.types.Property" maxOccurs="unbounded" minOccurs="0" name="properties"/>
-</structure>

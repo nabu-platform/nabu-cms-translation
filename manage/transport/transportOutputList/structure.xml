@@ -1,0 +1,4 @@
+<structure name="exportOutputList">
+    <structure definition="nabu.cms.translation.manage.transport.transportOutput" maxOccurs="unbounded" minOccurs="0" name="results" restrict="exportServiceProperties"/>
+    <structure definition="be.nabu.eai.module.services.crud.Page" minOccurs="0" name="page"/>
+</structure>

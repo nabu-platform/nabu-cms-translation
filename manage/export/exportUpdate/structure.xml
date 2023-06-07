@@ -1,1 +1,0 @@
-<structure name="exportUpdate" restrict="id, created, translationBundleId, lastExported,topics" superType="nabu.cms.translation.manage.export.exportOutput"/>

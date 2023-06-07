@@ -56,6 +56,15 @@
 				<from>date</from>
 				<to>pendingTranslation/modified</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="319bd11a83804b139c88cc7478ec2ed0"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>false</from>
+				<to>pendingTranslation/fuzzy</to>
+			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				disabled="false"

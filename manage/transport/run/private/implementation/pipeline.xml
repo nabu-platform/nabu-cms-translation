@@ -1,0 +1,13 @@
+<structure interface="nabu.cms.translation.manage.transport.run:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="translationExports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" minOccurs="0" name="transport"/>
+    <structure definition="nabu.utils.types.ParameterDescription" minOccurs="0" name="propertyParameter"/>
+    <structure definition="nabu.web.core.manage.reflection.propertyList" name="propertyList"/>
+    <structure definition="java.lang.Object" name="serviceOutput"/>
+    <structure definition="java.lang.Object" minOccurs="0" name="propertiesInstance"/>
+    <field minOccurs="0" name="started" type="java.util.Date"/>
+    <field minOccurs="0" name="stringifiedServiceOutput" type="java.lang.String"/>
+    <structure definition="nabu.cms.translation.specs.finalizedTranslation" maxOccurs="unbounded" minOccurs="0" name="terms"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="translations"/>
+</structure>

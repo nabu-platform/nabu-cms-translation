@@ -11,4 +11,6 @@
     <field comment="When a translation is deprecated in favor of a new translation, we mark the date. This allows us to get translations &quot;at a certain point in time&quot;;" minOccurs="0" name="deprecated" timezone="UTC" type="java.util.Date"/>
     <field comment="A translation might be disabled WITHIN the active time range because for example a hotfix is available." name="disabled" type="java.lang.Boolean"/>
     <field comment="The environment this was last modified in, it might indicate a hotfix" foreignKey="nabu.cms.translation.database.types.translationEnvironment:id" minOccurs="0" name="environmentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="Especially marked for review" minOccurs="0" name="fuzzy" type="java.lang.Boolean"/>
+    <field comment="Where did it come from? (e.g. from an import)" minOccurs="0" name="source" type="java.lang.String"/>
 </structure>

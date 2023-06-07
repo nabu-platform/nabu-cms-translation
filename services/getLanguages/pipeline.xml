@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="translationProjectId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field maxOccurs="unbounded" minOccurs="0" name="languages" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <structure collectionName="translationLanguages" definition="nabu.cms.translation.database.types.translationLanguage" duplicate="id,created,modified" maxOccurs="unbounded" minOccurs="0" name="language"/>
+    </structure>
+    <structure collectionName="masterDataCategories" definition="nabu.cms.core.types.emodel.core.MasterDataCategory" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011AD" name="category"/>
+</structure>

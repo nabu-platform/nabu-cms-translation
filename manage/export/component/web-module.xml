@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<webModule>
-    <webFragments>nabu.cms.translation.manage.export.list</webFragments>
-    <webFragments>nabu.cms.translation.manage.crud.translationExportTopic.services.create</webFragments>
-    <webFragments>nabu.cms.translation.manage.crud.translationExportTopic.services.delete</webFragments>
-    <webFragments>nabu.cms.translation.manage.crud.translationExport.services.create</webFragments>
-    <webFragments>nabu.cms.translation.manage.export.update</webFragments>
-    <webFragments>nabu.cms.translation.manage.export.run</webFragments>
-</webModule>

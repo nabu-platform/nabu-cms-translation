@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2023-04-20T09:07:54.264+02:00" lastModified="2023-06-07T13:49:25.648+02:00" leaf="true" version="34">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.web.core.manage.reflection.propertyList</references>
+    <references>nabu.cms.translation.manage.crud.translationTransport.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationTransportTopic.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationTransportTopic.services.list</references>
+    <references>nabu.utils.String.toStream</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.translation.manage.transport.transportOutputList</references>
+    <references>nabu.cms.translation.manage.crud.translationTransport.services.list</references>
+    <references>nabu.data.json.Services.unmarshal</references>
+</node>

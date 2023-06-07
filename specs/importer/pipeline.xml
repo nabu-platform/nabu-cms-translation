@@ -1,9 +1,0 @@
-<structure name="pipeline">
-    <structure name="input">
-        <field name="name" type="java.lang.String"/>
-        <field name="translationExportId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
-        <structure definition="nabu.cms.translation.specs.finalizedTranslation" maxOccurs="unbounded" minOccurs="0" name="terms"/>
-        <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
-    </structure>
-    <structure name="output"/>
-</structure>

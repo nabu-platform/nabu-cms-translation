@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="translationBundleId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field maxOccurs="unbounded" minOccurs="0" name="topics" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <structure collectionName="masterDataEntries" definition="nabu.cms.core.types.emodel.core.MasterDataEntry" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011A7" maxOccurs="unbounded" minOccurs="0" name="topics"/>
+    </structure>
+    <structure collectionName="masterDataCategories" definition="nabu.cms.core.types.emodel.core.MasterDataCategory" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011AD" name="category"/>
+</structure>
