@@ -1,0 +1,7 @@
+<structure interface="nabu.cms.translation.specs.transport" name="pipeline">
+    <structure name="input" restrict="properties">
+        <structure definition="nabu.cms.translation.providers.transport.masterdataProperties" name="properties"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="translationTransports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" name="transport"/>
+</structure>

@@ -962,6 +962,15 @@
 						<from>termLabel</from>
 						<to>instance/label</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="6e38f091befb49e488275345c0f17b26"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/source</from>
+						<to>instance/source</to>
+					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"

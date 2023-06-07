@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-06-07T16:33:25.978+02:00" lastModified="2023-06-07T16:44:52.590+02:00" leaf="true" version="6">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.services.loadWebApplication</references>
+    <references>nabu.cms.translation.manage.crud.translationTransport.types.output</references>
+    <references>nabu.cms.translation.providers.transport.webApplicationProperties</references>
+    <references>nabu.cms.translation.specs.transport</references>
+    <references>java.lang.Object</references>
+    <references>java.lang.String</references>
+    <references>java.util.UUID</references>
+    <references>nabu.cms.translation.manage.crud.translationTransport.services.get</references>
+</node>
