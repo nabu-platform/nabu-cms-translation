@@ -1,0 +1,8 @@
+<structure interface="nabu.cms.translation.manage.term.verify:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <field minOccurs="0" name="date" type="java.util.Date"/>
+    <structure collectionName="translationTermInstances" comment="The translations that are currently pending verification for this term in the different requested languages. These can be edited." definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="translationsToVerify"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="allActive"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="activeToDeprecate"/>
+</structure>

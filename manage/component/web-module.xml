@@ -15,4 +15,6 @@
     <webFragments>nabu.cms.translation.manage.language.create</webFragments>
     <webFragments>nabu.cms.translation.manage.crud.translationLanguage.services.list</webFragments>
     <webFragments>nabu.cms.translation.manage.crud.translationLanguage.services.update</webFragments>
+    <webFragments>nabu.cms.translation.manage.export.component</webFragments>
+    <webFragments>nabu.cms.translation.manage.term.verify</webFragments>
 </webModule>

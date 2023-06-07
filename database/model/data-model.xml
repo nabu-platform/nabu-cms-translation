@@ -89,7 +89,7 @@
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.cms.translation.database.types.translationExportInstance</type>
-        <x>1904</x>
-        <y>464</y>
+        <x>1735</x>
+        <y>482</y>
     </entries>
 </dataModel>

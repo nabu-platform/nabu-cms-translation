@@ -1,0 +1,26 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="translationBundleId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field name="webApplication" type="java.lang.String"/>
+        <field comment="Automatically link them to certain topics" maxOccurs="unbounded" minOccurs="0" name="topics" type="java.lang.String"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="nodes" definition="nabu.cms.core.types.emodel.core.Node" id="127-0-1-1--349ff93a:1578fc8f0d7:-8000:0000000000000990" name="application"/>
+    <structure definition="be.nabu.eai.module.web.application.api.TranslationKey" maxOccurs="unbounded" minOccurs="0" name="translationKeys"/>
+    <structure collectionName="masterDataCategories" definition="nabu.cms.core.crud.masterDataCategory.types.output" minOccurs="0" name="topicCategory"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.types.emodel.core.MasterDataEntry" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011A7" maxOccurs="unbounded" name="topicEntries"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.types.emodel.core.MasterDataEntry" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011A7" name="topicEntry"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" maxOccurs="unbounded" minOccurs="0" name="existingTopicLinks"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" minOccurs="0" name="existingTopicLink"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.database.types.translationTermTopic" name="newTopicEntry"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.database.types.translationTermTopic" maxOccurs="unbounded" minOccurs="0" name="newTopicEntries"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="files" type="java.lang.String"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="allTopics" type="java.lang.String"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="termStrings" type="java.lang.String"/>
+    <structure collectionName="translationTerms" comment="When translating stuff like masterdata, the &quot;contextId&quot; is the actual id of the masterdata entry.&#10;The &quot;term&quot; is the field we want to translate (e.g. name by default, but in the future we might want to translate description etc" definition="nabu.cms.translation.database.types.translationTerm" maxOccurs="unbounded" name="existingTranslations"/>
+    <structure collectionName="translationTerms" comment="When translating stuff like masterdata, the &quot;contextId&quot; is the actual id of the masterdata entry.&#10;The &quot;term&quot; is the field we want to translate (e.g. name by default, but in the future we might want to translate description etc" definition="nabu.cms.translation.database.types.translationTerm" name="existingTranslation"/>
+    <field minOccurs="0" name="termString" type="java.lang.String"/>
+    <field minOccurs="0" name="date" type="java.util.Date"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="applicableTopics" type="java.lang.String"/>
+    <field name="termLabel" type="java.lang.String"/>
+</structure>

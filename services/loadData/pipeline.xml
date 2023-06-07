@@ -1,0 +1,27 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="translationBundleId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <structure definition="java.lang.Object" maxOccurs="unbounded" minOccurs="0" name="objects"/>
+        <field comment="The fields to translate" maxOccurs="unbounded" minOccurs="0" name="fields" type="java.lang.String"/>
+        <field comment="Automatically link them to certain topics" maxOccurs="unbounded" minOccurs="0" name="topics" type="java.lang.String"/>
+        <field comment="A query that can extract a good label for the given field" minOccurs="0" name="labelQuery" type="java.lang.String"/>
+        <field minOccurs="0" name="defaultLanguageId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="nabu.utils.types.ParameterDescription" maxOccurs="unbounded" minOccurs="0" name="parameters"/>
+    <field minOccurs="0" name="primaryKeyField" type="java.lang.String"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="translatableFields" type="java.lang.String"/>
+    <structure collectionName="translationTerms" comment="When translating stuff like masterdata, the &quot;contextId&quot; is the actual id of the masterdata entry.&#10;The &quot;term&quot; is the field we want to translate (e.g. name by default, but in the future we might want to translate description etc" definition="nabu.cms.translation.database.types.translationTerm" maxOccurs="unbounded" name="translationTerms"/>
+    <field name="fieldValue" type="java.lang.String"/>
+    <field name="primaryKeyValue" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <structure collectionName="translationTerms" comment="When translating stuff like masterdata, the &quot;contextId&quot; is the actual id of the masterdata entry.&#10;The &quot;term&quot; is the field we want to translate (e.g. name by default, but in the future we might want to translate description etc" definition="nabu.cms.translation.database.types.translationTerm" maxOccurs="unbounded" name="existingTranslations"/>
+    <structure collectionName="translationTerms" comment="When translating stuff like masterdata, the &quot;contextId&quot; is the actual id of the masterdata entry.&#10;The &quot;term&quot; is the field we want to translate (e.g. name by default, but in the future we might want to translate description etc" definition="nabu.cms.translation.database.types.translationTerm" name="existingTranslation"/>
+    <field minOccurs="0" name="date" type="java.util.Date"/>
+    <structure collectionName="masterDataCategories" definition="nabu.cms.core.crud.masterDataCategory.types.output" minOccurs="0" name="topicCategory"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.types.emodel.core.MasterDataEntry" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011A7" maxOccurs="unbounded" name="topicEntries"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.types.emodel.core.MasterDataEntry" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011A7" name="newEntry"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" maxOccurs="unbounded" minOccurs="0" name="existingTopicLinks"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" minOccurs="0" name="existingTopicLink"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.database.types.translationTermTopic" name="newTopicEntry"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.database.types.translationTermTopic" maxOccurs="unbounded" minOccurs="0" name="newTopicEntries"/>
+</structure>

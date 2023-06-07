@@ -1,0 +1,15 @@
+translationProject.list: list all the projects you have access to
+translationBundle.list: list all the bundles you have access to
+translationBundle.translate: suggest a translation
+translationBundle.validate: validate a translation (for reviewer)
+translationBundle.manage: add terms etc
+
+manager: translationProject.list, translationBundle.list,translationProject.manage, translationBundle.manage
+member: translationProject.list, translationBundle.list
+participant: translationProject.list, translationBundle.list,translationBundle.manage
+translator: translationProject.list, translationBundle.list,translationBundle.translate
+reviewer: translationProject.list, translationBundle.list,translationBundle.validate
+
+
+we create roles at the project level so as not to clutter the global namespace
+we do create the permission at the global namespace level because it should be the same permission in all projects (so you can also set for example a global translator)

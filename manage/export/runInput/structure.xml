@@ -1,0 +1,3 @@
+<structure name="runInput">
+    <field minOccurs="0" name="comment" type="java.lang.String"/>
+</structure>

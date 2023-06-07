@@ -3,7 +3,7 @@
 		id="7600fbe2-0ac3-4f3d-8aab-bf32a7f3259f"
 		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-			disabled="false"
+			disabled="true"
 			id="ab3ed2c8-2c83-4e63-825d-1a02882a5c38"
 			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
@@ -68,7 +68,7 @@
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.For"
-			disabled="false"
+			disabled="true"
 			id="5360e7f3ffa94756b45cd955cdb2117a"
 			lineNumber="3"
 			variable="connectionId">

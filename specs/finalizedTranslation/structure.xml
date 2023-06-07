@@ -1,0 +1,3 @@
+<structure name="finalizedTranslation" superType="nabu.cms.translation.database.types.translationTerm">
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.database.types.translationTermInstance" maxOccurs="unbounded" minOccurs="0" name="translations"/>
+</structure>

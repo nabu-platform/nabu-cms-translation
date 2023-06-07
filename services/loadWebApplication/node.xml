@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-24T15:10:53.577+02:00" lastModified="2023-05-24T17:14:16.313+02:00" leaf="true" version="41">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.List.add</references>
+    <references>nabu.cms.core.services.context.getApplication</references>
+    <references>nabu.cms.translation.database.types.translationTerm</references>
+    <references>java.util.Date</references>
+    <references>nabu.cms.core.crud.masterDataCategory.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.services.list</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.services.create</references>
+    <references>nabu.utils.List.unique</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic.types.output</references>
+    <references>be.nabu.eai.module.web.application.api.TranslationKey</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic.services.list</references>
+    <references>nabu.utils.String.join</references>
+    <references>nabu.cms.core.v2.manage.masterdata.crud.masterDataEntry.services.list</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.core.crud.masterDataEntry.services.create</references>
+    <references>nabu.cms.translation.database.types.translationTermTopic</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.cms.core.crud.masterDataCategory.services.create</references>
+    <references>nabu.cms.core.types.emodel.core.MasterDataEntry</references>
+    <references>nabu.cms.core.crud.masterDataCategory.services.list</references>
+    <references>java.util.UUID</references>
+    <references>nabu.utils.List.addAll</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic.services.create</references>
+    <references>nabu.utils.String.replace</references>
+    <references>nabu.web.application.Services.translationKeys</references>
+    <references>nabu.cms.core.types.emodel.core.Node</references>
+</node>

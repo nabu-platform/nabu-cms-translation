@@ -1,4 +1,4 @@
 <structure collectionName="translationLanguages" duplicate="id,created,modified" name="translationLanguage" superType="nabu.cms.core.types.emodel.core.MasterDataEntry">
     <field minOccurs="0" name="coverage" type="java.lang.Double"/>
-    <field name="default" type="java.lang.Boolean"/>
+    <field name="defaultLanguage" type="java.lang.Boolean"/>
 </structure>

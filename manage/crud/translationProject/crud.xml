@@ -10,7 +10,6 @@
     <createBlacklistFields>modified</createBlacklistFields>
     <createBlacklistFields>slug</createBlacklistFields>
     <createBlacklistFields>priority</createBlacklistFields>
-    <createBlacklistFields>parentId</createBlacklistFields>
     <createBlacklistFields>ownerId</createBlacklistFields>
     <createBlacklistFields>started</createBlacklistFields>
     <createBlacklistFields>stopped</createBlacklistFields>
@@ -62,7 +61,6 @@
     <listBlacklistFields>enabled</listBlacklistFields>
     <listBlacklistFields>languageId</listBlacklistFields>
     <listBlacklistFields>ownerId</listBlacklistFields>
-    <listBlacklistFields>parentId</listBlacklistFields>
     <listBlacklistFields>path</listBlacklistFields>
     <listBlacklistFields>priority</listBlacklistFields>
     <listBlacklistFields>slug</listBlacklistFields>
@@ -80,7 +78,6 @@
     <updateBlacklistFields>componentId</updateBlacklistFields>
     <updateBlacklistFields>anonymized</updateBlacklistFields>
     <updateBlacklistFields>ownerId</updateBlacklistFields>
-    <updateBlacklistFields>parentId</updateBlacklistFields>
     <updateBlacklistFields>priority</updateBlacklistFields>
     <updateBlacklistFields>slug</updateBlacklistFields>
     <updateBlacklistFields>verified</updateBlacklistFields>

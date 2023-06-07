@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-10T09:58:59.640+02:00" lastModified="2023-05-10T14:20:02.524+02:00" leaf="true" version="27">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.List.add</references>
+    <references>nabu.cms.translation.database.types.translationTerm</references>
+    <references>nabu.services.jdbc.Services.merge</references>
+    <references>java.util.Date</references>
+    <references>nabu.utils.Server.uuid</references>
+    <references>nabu.cms.core.crud.masterDataCategory.types.output</references>
+    <references>nabu.utils.reflection.Type.of</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.services.list</references>
+    <references>nabu.utils.types.ParameterDescription</references>
+    <references>nabu.services.glue.Services.evaluate</references>
+    <references>nabu.utils.List.unique</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic.types.output</references>
+    <references>nabu.utils.reflection.Type.describe</references>
+    <references>nabu.cms.translation.manage.crud.translationTermTopic.services.list</references>
+    <references>nabu.services.jdbc.Services.insert</references>
+    <references>nabu.cms.core.v2.manage.masterdata.crud.masterDataEntry.services.list</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.core.crud.masterDataEntry.services.create</references>
+    <references>nabu.utils.reflection.Type.get</references>
+    <references>nabu.cms.translation.database.types.translationTermTopic</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.cms.core.crud.masterDataCategory.services.create</references>
+    <references>nabu.cms.core.types.emodel.core.MasterDataEntry</references>
+    <references>nabu.cms.core.crud.masterDataCategory.services.list</references>
+    <references>java.util.UUID</references>
+    <references>java.lang.Object</references>
+</node>

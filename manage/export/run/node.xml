@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2023-04-20T10:02:26.133+02:00" lastModified="2023-05-09T13:22:05.072+02:00" leaf="true" version="35">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.Runtime.summarizeException</references>
+    <references>nabu.cms.translation.manage.crud.translationExport.types.output</references>
+    <references>nabu.services.jdbc.Services.selectDynamic</references>
+    <references>java.util.Date</references>
+    <references>nabu.cms.translation.specs.export</references>
+    <references>nabu.utils.types.ParameterDescription</references>
+    <references>nabu.utils.reflection.Type.describe</references>
+    <references>nabu.cms.translation.manage.export.runInput</references>
+    <references>java.lang.String</references>
+    <references>nabu.data.json.Services.marshal</references>
+    <references>nabu.data.json.Services.unmarshal</references>
+    <references>nabu.utils.Properties.toObject</references>
+    <references>nabu.utils.Stream.toString</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.utils.String.toStream</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.services.list</references>
+    <references>nabu.cms.translation.specs.finalizedTranslation</references>
+    <references>nabu.cms.translation.manage.crud.translationExportInstance.services.create</references>
+    <references>nabu.web.core.manage.reflection.propertyList</references>
+    <references>nabu.services.jdbc.Services.update</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationExport.services.list</references>
+    <references>java.lang.Object</references>
+    <references>nabu.cms.translation.manage.crud.translationExportTopic.services.list</references>
+    <references>nabu.cms.translation.manage.term.topicSql</references>
+</node>

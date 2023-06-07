@@ -1,0 +1,6 @@
+<structure interface="nabu.cms.translation.manage.export.update:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="translationExports" definition="nabu.cms.translation.manage.crud.translationExport.types.output" minOccurs="0" name="current"/>
+    <structure definition="nabu.web.core.manage.reflection.propertyList" name="propertyList"/>
+</structure>
