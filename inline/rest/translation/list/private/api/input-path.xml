@@ -1,0 +1,3 @@
+<structure name="path">
+    <field name="translationBundleId" type="java.util.UUID"/>
+</structure>

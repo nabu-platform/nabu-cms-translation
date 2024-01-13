@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2024-01-13T10:26:22.189+01:00" lastModified="2024-01-13T10:38:28.928+01:00" leaf="true" version="12">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.inline.rest.translation.translationList</references>
+    <references>nabu.web.application.Services.configuration</references>
+    <references>nabu.utils.Runtime.setServiceContext</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.Runtime.getServiceContext</references>
+    <references>nabu.cms.translation.inline.configuration</references>
+</node>

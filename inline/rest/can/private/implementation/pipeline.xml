@@ -1,0 +1,5 @@
+<structure interface="nabu.cms.translation.inline.rest.can:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.translation.inline.configuration" name="configuration"/>
+</structure>

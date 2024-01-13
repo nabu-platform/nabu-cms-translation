@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2024-01-13T10:26:16.823+01:00" lastModified="2024-01-13T10:44:27.296+01:00" leaf="true" version="18">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.inline.rest.translation.translationList</references>
+    <references>nabu.cms.translation.manage.crud.translationBundle.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationLanguage.services.list</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.services.list</references>
+    <references>nabu.utils.Runtime.getServiceContext</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.services.list</references>
+    <references>nabu.cms.translation.inline.configuration</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.types.output</references>
+    <references>nabu.cms.translation.manage.crud.translationBundle.services.get</references>
+    <references>nabu.cms.translation.manage.crud.translationLanguage.types.output</references>
+    <references>nabu.web.application.Services.configuration</references>
+    <references>nabu.utils.Runtime.setServiceContext</references>
+    <references>java.lang.String</references>
+</node>

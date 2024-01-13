@@ -1,0 +1,6 @@
+<structure interface="nabu.cms.translation.inline.rest.translation.update:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.translation.inline.configuration" name="configuration"/>
+    <field minOccurs="0" name="originalServiceContext" type="java.lang.String"/>
+</structure>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restInterface>
+    <method>GET</method>
+    <path>/can/translate/inline</path>
+    <role>$user</role>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useGlobalPermissionContext>false</useGlobalPermissionContext>
+    <output>nabu.cms.core.v2.security.web.canOutput</output>
+    <lenient>true</lenient>
+    <webApplicationId>true</webApplicationId>
+    <geoPosition>false</geoPosition>
+    <useAsAuthorizationServiceContext>false</useAsAuthorizationServiceContext>
+    <language>false</language>
+    <allowFormBinding>false</allowFormBinding>
+    <caseInsensitive>false</caseInsensitive>
+    <cache>false</cache>
+    <allowCookiesWithoutReferer>false</allowCookiesWithoutReferer>
+    <allowCookiesWithExternalReferer>false</allowCookiesWithExternalReferer>
+    <request>false</request>
+    <allowHeaderAsQueryParameter>false</allowHeaderAsQueryParameter>
+    <useServerCache>false</useServerCache>
+    <source>false</source>
+    <allowRaw>false</allowRaw>
+    <domain>false</domain>
+    <origin>false</origin>
+    <scheme>false</scheme>
+    <ignoreOffline>false</ignoreOffline>
+    <allowRootArrays>false</allowRootArrays>
+    <captureErrors>false</captureErrors>
+    <captureSuccessful>false</captureSuccessful>
+    <limitedToInterface>false</limitedToInterface>
+    <allowExplicitResponseCode>false</allowExplicitResponseCode>
+</restInterface>

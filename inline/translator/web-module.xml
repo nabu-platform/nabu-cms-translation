@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <configurationType>nabu.cms.translation.inline.configuration</configurationType>
+    <webFragments>nabu.cms.translation.inline.rest.can</webFragments>
+    <webFragments>nabu.cms.translation.inline.rest.translation.list</webFragments>
+    <webFragments>nabu.cms.translation.inline.rest.translation.update</webFragments>
+</webModule>

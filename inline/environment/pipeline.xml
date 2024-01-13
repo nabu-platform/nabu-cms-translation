@@ -1,0 +1,12 @@
+<structure interface="nabu.web.core.specifications.environmentData" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.translation.inline.configuration" name="configuration"/>
+    <field minOccurs="0" name="originalServiceContext" type="java.lang.String"/>
+    <structure name="tranlationSettings">
+        <field name="enabled" type="java.lang.Boolean"/>
+        <field maxOccurs="unbounded" minOccurs="0" name="languages" type="java.lang.String"/>
+    </structure>
+    <structure collectionName="translationBundles" definition="nabu.cms.translation.manage.crud.translationBundle.types.output" duplicate="id, created, modified" name="bundle" restrict="anonymized,componentId,enabled,languageId,modified,ownerId,path,priority,slug,started,stopped,title,verified,version"/>
+    <structure collectionName="translationProjects" definition="nabu.cms.translation.manage.crud.translationProject.types.output" duplicate="id,created,modified" name="project" restrict="anonymized,componentId,enabled,languageId,ownerId,path,priority,slug,started,stopped,title,verified,version"/>
+</structure>

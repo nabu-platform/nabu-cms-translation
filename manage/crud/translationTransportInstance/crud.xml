@@ -5,7 +5,9 @@
     <broadcastUpdate>false</broadcastUpdate>
     <coreType>nabu.cms.translation.database.types.translationTransportInstance</coreType>
     <createBlacklistFields>created</createBlacklistFields>
+    <createPermission>translationBundle.manage</createPermission>
     <createRole>$user</createRole>
+    <deletePermission>translationBundle.manage</deletePermission>
     <deleteRole>$user</deleteRole>
     <filters>
         <caseInsensitive>false</caseInsensitive>
@@ -23,12 +25,16 @@
         <input>true</input>
         <vary>false</vary>
     </filters>
+    <getPermission>translationBundle.list</getPermission>
     <hooks>false</hooks>
+    <listPermission>translationBundle.list</listPermission>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
     <restLimitToUser>true</restLimitToUser>
     <updateBlacklistFields>created</updateBlacklistFields>
+    <updatePermission>translationBundle.manage</updatePermission>
     <updateRole>$user</updateRole>
+    <useAsAuthorizationServiceContext>false</useAsAuthorizationServiceContext>
     <useExplicitLanguage>false</useExplicitLanguage>
     <useGlobalPermissionContext>false</useGlobalPermissionContext>
     <useLanguage>false</useLanguage>

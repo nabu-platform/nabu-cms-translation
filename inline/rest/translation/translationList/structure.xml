@@ -1,0 +1,3 @@
+<structure name="translationList">
+    <structure definition="nabu.cms.translation.inline.rest.translation.translationRecord" maxOccurs="unbounded" minOccurs="0" name="terms"/>
+</structure>

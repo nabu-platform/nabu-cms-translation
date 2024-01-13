@@ -1,0 +1,10 @@
+<structure interface="nabu.cms.translation.inline.rest.translation.list:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.translation.inline.configuration" name="configuration"/>
+    <field minOccurs="0" name="originalServiceContext" type="java.lang.String"/>
+    <structure collectionName="translationTerms" definition="nabu.cms.translation.manage.crud.translationTerm.types.output" maxOccurs="unbounded" minOccurs="0" name="terms"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="translations"/>
+    <structure collectionName="translationBundles" definition="nabu.cms.translation.manage.crud.translationBundle.types.output" duplicate="id, created, modified" name="bundle" restrict="anonymized,componentId,enabled,languageId,modified,ownerId,path,priority,slug,started,stopped,title,verified,version"/>
+    <structure collectionName="translationLanguages" definition="nabu.cms.translation.manage.crud.translationLanguage.types.output" duplicate="id,created,modified" maxOccurs="unbounded" minOccurs="0" name="languages"/>
+</structure>
