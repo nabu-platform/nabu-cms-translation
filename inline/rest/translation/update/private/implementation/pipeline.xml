@@ -3,4 +3,11 @@
     <structure name="output"/>
     <structure definition="nabu.cms.translation.inline.configuration" name="configuration"/>
     <field minOccurs="0" name="originalServiceContext" type="java.lang.String"/>
+    <structure collectionName="translationTerms" definition="nabu.cms.translation.manage.crud.translationTerm.types.output" maxOccurs="unbounded" minOccurs="0" name="existingTerms"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="existingTranslations"/>
+    <structure collectionName="translationLanguages" definition="nabu.cms.translation.manage.crud.translationLanguage.types.output" duplicate="id,created,modified" maxOccurs="unbounded" minOccurs="0" name="languages"/>
+    <structure collectionName="translationTerms" definition="nabu.cms.translation.manage.crud.translationTerm.types.output" minOccurs="0" name="existingTerm"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" minOccurs="0" name="existingTranslation"/>
+    <structure collectionName="translationLanguages" definition="nabu.cms.translation.manage.crud.translationLanguage.types.output" duplicate="id,created,modified" minOccurs="0" name="language"/>
+    <structure collectionName="translationBundles" definition="nabu.cms.translation.manage.crud.translationBundle.types.output" duplicate="id, created, modified" name="bundle" restrict="anonymized,componentId,enabled,languageId,modified,ownerId,path,priority,slug,started,stopped,title,verified,version"/>
 </structure>

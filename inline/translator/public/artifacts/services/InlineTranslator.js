@@ -3,7 +3,8 @@ Vue.service("inlineTranslator", {
 	services: ["environment", "swagger", "page"],
 	data: function() {
 		return {
-			translationBundleId: null
+			translationBundleId: null,
+			updateTimers: {}
 		}
 	},
 	activate: function(done) {
@@ -27,6 +28,12 @@ Vue.service("inlineTranslator", {
 									if (strings && strings.length) {
 										self.showTranslationBox(strings, event.x, event.y);
 										event.stopPropagation();
+									}
+								}
+								var box = document.getElementById("inlineTranslatorBox");
+								if (box) {
+									if (!box.contains(event.target)) {
+										box.parentNode.removeChild(box);
 									}
 								}
 							});
@@ -56,6 +63,21 @@ Vue.service("inlineTranslator", {
 			}
 			return stringContent.match(/(%\{[^}]+\})/g);
 		},
+		updateTranslation(current) {
+			if (this.updateTimers[current.key]) {
+				clearTimeout(this.updateTimers[current.key]);
+			}
+			var self = this;
+			this.updateTimers[current.key] = setTimeout(function() {
+				console.log("updating", current);
+				self.$services.swagger.execute("nabu.cms.translation.inline.rest.translation.update", {
+					translationBundleId: self.translationBundleId,
+					body: {
+						terms: [current]
+					}
+				})
+			}, 600);
+		},
 		showTranslationBox: function(strings, x, y) {
 			// strip the translation brackets
 			var terms = strings.map(function(x) {
@@ -68,7 +90,7 @@ Vue.service("inlineTranslator", {
 					var existing = {};
 					if (list && list.terms) {
 						list.terms.forEach(function(term) {
-							existing[term.term] = term;
+							existing[term.key] = term;
 						});
 					}
 					// we want to remove any existing translation box
@@ -79,20 +101,31 @@ Vue.service("inlineTranslator", {
 					box = document.createElement("div");
 					box.setAttribute("id", "inlineTranslatorBox");
 					box.setAttribute("class", "inline-translator-box");
-					
+
 					var languages = self.$services.environment.get("inlineTranslator").languages;
 					terms.forEach(function(term) {
 						var current = existing[term];
+						if (!current) {
+							current = {
+								key: term
+							};
+						}
+						if (!current.translations) {
+							current.translations = [];
+						}
 						
 						var div = document.createElement("div");
 						box.appendChild(div);
-						div.setAttribute("class", "inlineString");
+						div.setAttribute("class", "inlineTranslation");
 						
+						var generalDiv = document.createElement("div");
+						generalDiv.setAttribute("class", "inlineTranslationDescription");
+						div.appendChild(generalDiv);
 						// first the name
 						var nameSpan = document.createElement("span");
 						nameSpan.setAttribute("class", "term-name");
 						nameSpan.innerHTML = term;
-						div.appendChild(nameSpan);
+						generalDiv.appendChild(nameSpan);
 						
 						// then the label (editable)
 						var labelInput = document.createElement("input");
@@ -100,21 +133,55 @@ Vue.service("inlineTranslator", {
 							labelInput.value = current.label;
 						}
 						labelInput.setAttribute("placeholder", "Short description of translation term");
-						div.appendChild(labelInput);
+						generalDiv.appendChild(labelInput);
 						labelInput.addEventListener("input", function(event) {
-							console.log("label updated!");
+							current.label = labelInput.value;
+							self.updateTranslation(current);
 						})
 						
 						// the description (editable)
+						var descriptionInput = document.createElement("textarea");
+						if (current && current.description) {
+							descriptionInput.value = current.description;
+						}
+						descriptionInput.setAttribute("placeholder", "Longer description of translation term");
+						generalDiv.appendChild(descriptionInput);
+						descriptionInput.addEventListener("input", function(event) {
+							current.description = descriptionInput.value;
+							self.updateTranslation(current);
+						});
 						
 						// and then the actual translations
 						languages.forEach(function(language) {
-							var div = document.createElement("div");
-							div.setAttribute("class", "inlineLanguage");	
-							var lbox = document.createElement("span");
-							lbox.innerHTML = language;
-							lbox.setAttribute("class", "inlineLanguageName");
-							div.appendChild(lbox);
+							var entry = current.translations.filter(function(x) {
+								return x.language == language;
+							})[0];
+							if (!entry) {
+								entry = {
+									language: language,
+									translation: null
+								}
+								current.translations.push(entry);
+							}
+							var languageDiv = document.createElement("div");
+							languageDiv.setAttribute("class", "inlineLanguage");	
+							var lname = document.createElement("span");
+							lname.innerHTML = language;
+							lname.setAttribute("class", "inlineLanguageName");
+							languageDiv.appendChild(lname);
+							
+							var translationInput = document.createElement("textarea");
+							console.log("setting textarea value", entry);
+							if (entry && entry.translation) {
+								translationInput.value = entry.translation;
+							}
+							translationInput.setAttribute("placeholder", "Translation for " + language);
+							languageDiv.appendChild(translationInput);
+							translationInput.addEventListener("input", function(event) {
+								entry.translation = translationInput.value ? translationInput.value : null;
+								self.updateTranslation(current);
+							});
+							div.appendChild(languageDiv);
 						});
 						
 					})
