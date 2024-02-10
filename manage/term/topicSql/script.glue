@@ -11,7 +11,7 @@ for (topicId : topicIds)
 	where = where + " join ~translation_term_topics ttt" + $index + " on ttt" + $index + ".translation_term_id = tt.id and ttt" + $index + ".translation_topic_id = '" + topicId + "'"
 	
 if (q != null)
-	where = where + " where lower(tt.term) like '%' || :q || '%'"
+	where = where + " where lower(tt.term) like '%' || lower(:q) || '%'"
 	
 	@return
 	be.nabu.libs.types.api.KeyValuePair [] pairs = series(structure(key: 'q', value: q))

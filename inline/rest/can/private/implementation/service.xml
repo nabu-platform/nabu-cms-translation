@@ -54,7 +54,7 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="48de10df5f234209ada0852084fa7075"
-				serviceId="nabu.cms.core.v2.security.web.can"
+				serviceId="nabu.cms.core.v2.security.shared.can"
 				resultName="resultda9ef0c593b141ecab3256d9e83350cb"
 				temporaryMapping="true"
 				x="217"
@@ -92,7 +92,7 @@
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
-				id="1e85933c342a4e899edf01bb75b6c280"
+				id="0d0b66d29b544d8fb535336f2279f02b"
 				mask="false"
 				optional="false"
 				fixedValue="false">

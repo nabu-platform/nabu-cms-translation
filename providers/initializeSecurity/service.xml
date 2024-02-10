@@ -83,7 +83,7 @@
 					mask="false"
 					optional="false"
 					fixedValue="true">
-				<from>translationProject.create,translationProject.manage,translationProject.list,translationBundle.manage,translationBundle.list,translationBundle.comment</from>
+				<from>translationProject.create,translationProject.manage,translationProject.list,translationBundle.manage,translationBundle.list,translationBundle.comment,translationBundle.translate,translationBundle.validate</from>
 				<to>string</to>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"

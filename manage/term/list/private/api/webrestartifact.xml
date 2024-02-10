@@ -2,7 +2,7 @@
 <restInterface>
     <method>GET</method>
     <path>/translationBundle/{bundleId}/translationTerm</path>
-    <queryParameters>limit, offset, orderBy, q, languageIds, topicIds</queryParameters>
+    <queryParameters>limit, offset, orderBy, q, languageIds, searchLanguageIds, topicIds</queryParameters>
     <role>$user</role>
     <permissionAction>translationBundle.list</permissionAction>
     <permissionContext>=input/path/bundleId</permissionContext>
@@ -14,6 +14,7 @@
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>
     <geoPosition>false</geoPosition>
+    <useAsAuthorizationServiceContext>false</useAsAuthorizationServiceContext>
     <language>false</language>
     <allowFormBinding>false</allowFormBinding>
     <caseInsensitive>false</caseInsensitive>
@@ -26,8 +27,12 @@
     <source>false</source>
     <allowRaw>false</allowRaw>
     <domain>false</domain>
+    <origin>false</origin>
+    <scheme>false</scheme>
     <ignoreOffline>false</ignoreOffline>
     <allowRootArrays>false</allowRootArrays>
     <captureErrors>false</captureErrors>
     <captureSuccessful>false</captureSuccessful>
+    <limitedToInterface>false</limitedToInterface>
+    <allowExplicitResponseCode>false</allowExplicitResponseCode>
 </restInterface>
