@@ -1,10 +1,14 @@
 <structure name="pipeline">
     <structure name="input">
         <field name="transportId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field minOccurs="0" name="includeDefault" type="java.lang.Boolean"/>
     </structure>
     <structure name="output">
         <structure definition="nabu.cms.translation.specs.finalizedTranslation" maxOccurs="unbounded" minOccurs="0" name="terms"/>
     </structure>
-    <structure collectionName="translationExports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" minOccurs="0" name="transport"/>
-    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" maxOccurs="unbounded" minOccurs="0" name="translations"/>
+    <structure collectionName="translationExports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" enricher="nabu.cms.translation.manage.crud.translationTransport.services.list" minOccurs="0" name="transport" persister="nabu.cms.translation.manage.crud.translationTransport.batch.updateAll"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" enricher="nabu.cms.translation.manage.crud.translationTermInstance.services.list" maxOccurs="unbounded" minOccurs="0" name="translations" persister="nabu.cms.translation.manage.crud.translationTermInstance.batch.updateAll"/>
+    <structure collectionName="translationBundles" definition="nabu.cms.translation.manage.crud.translationBundle.types.output" duplicate="id, created, modified" enricher="nabu.cms.translation.manage.crud.translationBundle.services.list" name="bundle" persister="nabu.cms.translation.manage.crud.translationBundle.batch.updateAll" restrict="anonymized,componentId,enabled,languageId,modified,ownerId,path,priority,slug,started,stopped,title,verified,version"/>
+    <structure collectionName="translationLanguages" definition="nabu.cms.translation.manage.crud.translationLanguage.types.output" duplicate="id,created,modified" enricher="nabu.cms.translation.manage.crud.translationLanguage.services.list" maxOccurs="unbounded" minOccurs="0" name="languages" persister="nabu.cms.translation.manage.crud.translationLanguage.batch.updateAll"/>
+    <field minOccurs="0" name="date" type="java.util.Date"/>
 </structure>
