@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-04-20T13:41:30.313+02:00" lastModified="2024-06-28T08:37:38.022+02:00" leaf="true" version="58">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.providers.transport.excel.excelRecordList</references>
+    <references>nabu.data.excel.Services.marshal</references>
+    <references>nabu.frameworks.datastore.Services.store</references>
+    <references>nabu.utils.Date.format</references>
+    <references>nabu.cms.translation.database.types.translationLanguage</references>
+    <references>nabu.utils.List.unique</references>
+    <references>java.util.UUID</references>
+    <references>nabu.cms.translation.specs.finalizedTranslation</references>
+    <references>nabu.cms.core.crud.masterDataEntry.types.output</references>
+    <references>nabu.utils.String.join</references>
+    <references>nabu.cms.core.crud.masterDataEntry.services.list</references>
+    <references>nabu.cms.translation.specs.transport</references>
+    <references>java.lang.Object</references>
+    <references>nabu.cms.translation.providers.transport.excel.excelExportConfiguration</references>
+    <references>java.lang.String</references>
+    <references>java.net.URI</references>
+    <references>nabu.cms.translation.services.transport.getTerms</references>
+</node>

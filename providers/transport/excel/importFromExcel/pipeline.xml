@@ -1,0 +1,18 @@
+<structure interface="nabu.cms.translation.specs.transport" name="pipeline">
+    <structure name="input" restrict="properties">
+        <structure definition="nabu.cms.translation.providers.transport.excel.excelImportConfiguration" name="properties"/>
+        <field name="excel" type="[B"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="nabu.cms.translation.specs.finalizedTranslation" maxOccurs="unbounded" minOccurs="0" name="terms"/>
+    <structure collectionName="translationTransports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" enricher="nabu.cms.translation.manage.crud.translationTransport.services.list" name="transport" persister="nabu.cms.translation.manage.crud.translationTransport.batch.updateAll"/>
+    <structure collectionName="translationBundles" definition="nabu.cms.translation.manage.crud.translationBundle.types.output" duplicate="id, created, modified" enricher="nabu.cms.translation.manage.crud.translationBundle.services.list" name="bundle" persister="nabu.cms.translation.manage.crud.translationBundle.batch.updateAll" restrict="anonymized,componentId,enabled,languageId,modified,ownerId,path,priority,slug,started,stopped,title,verified,version"/>
+    <structure collectionName="translationLanguages" definition="nabu.cms.translation.manage.crud.translationLanguage.types.output" duplicate="id,created,modified" enricher="nabu.cms.translation.manage.crud.translationLanguage.services.list" maxOccurs="unbounded" minOccurs="0" name="languages" persister="nabu.cms.translation.manage.crud.translationLanguage.batch.updateAll"/>
+    <structure definition="nabu.cms.translation.providers.transport.excel.excelRecordList" name="excelList"/>
+    <structure definition="nabu.cms.translation.specs.finalizedTranslation" minOccurs="0" name="term"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.database.types.translationTermInstance" minOccurs="0" name="existingTranslation"/>
+    <structure collectionName="translationLanguages" definition="nabu.cms.translation.manage.crud.translationLanguage.types.output" duplicate="id,created,modified" enricher="nabu.cms.translation.manage.crud.translationLanguage.services.list" minOccurs="0" name="language" persister="nabu.cms.translation.manage.crud.translationLanguage.batch.updateAll"/>
+    <field minOccurs="0" name="date" type="java.util.Date"/>
+    <field comment="Every time we &quot;verify&quot; a translation, we start a new entry with an incremented version for further manipulation." name="maximumVersion" type="java.lang.Long"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.database.types.translationTermInstance" maxOccurs="unbounded" minOccurs="0" name="translationsToMerge"/>
+</structure>

@@ -322,6 +322,15 @@
 						<from>input/path/translationBundleId</from>
 						<to>contextId</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="10fda9bf0d7e4a25a1c433c60e8f48a6"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>term/defaultValue</from>
+						<to>instance/defaultValue</to>
+					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
@@ -354,6 +363,15 @@
 						fixedValue="false">
 					<from>term/description</from>
 					<to>existingTerm/description</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="72850a63268a4c958cb97e0b8c1ce0f3"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>term/defaultValue</from>
+					<to>existingTerm/defaultValue</to>
 				</steps>
 			</steps>
 		</steps>

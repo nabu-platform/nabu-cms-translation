@@ -7,4 +7,5 @@
     <field comment="Any configurable properties for this service" minOccurs="0" name="transportServiceProperties" type="java.lang.String"/>
     <field minOccurs="0" name="lastTransported" timezone="UTC" type="java.util.Date"/>
     <field comment="IN or OUT" name="direction" type="java.lang.String"/>
+    <field comment="Whether or not it requires an uri as input" minOccurs="0" name="requiresData" type="java.lang.Boolean"/>
 </structure>

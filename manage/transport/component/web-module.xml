@@ -6,4 +6,5 @@
     <webFragments>nabu.cms.translation.manage.crud.translationTransport.services.create</webFragments>
     <webFragments>nabu.cms.translation.manage.transport.update</webFragments>
     <webFragments>nabu.cms.translation.manage.transport.run</webFragments>
+    <webFragments>nabu.cms.translation.manage.transport.download</webFragments>
 </webModule>

@@ -289,6 +289,15 @@
 				<from>term/description</from>
 				<to>output/content/terms[0]/description</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1d1ab29a844042c6a63a4afb0aa00ccf"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>term/defaultValue</from>
+				<to>output/content/terms[0]/defaultValue</to>
+			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.For"
 				disabled="false"

@@ -1,3 +1,4 @@
 <structure name="runInput">
     <field minOccurs="0" name="comment" type="java.lang.String"/>
+    <structure definition="nabu.cms.core.types.file" minOccurs="0" name="data"/>
 </structure>

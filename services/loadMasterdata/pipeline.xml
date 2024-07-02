@@ -6,5 +6,5 @@
         <field comment="Automatically link them to certain topics" maxOccurs="unbounded" minOccurs="0" name="topics" type="java.lang.String"/>
     </structure>
     <structure name="output"/>
-    <structure collectionName="masterDataEntries" definition="nabu.cms.core.crud.masterDataEntry.types.output" maxOccurs="unbounded" minOccurs="0" name="entries"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.crud.masterDataEntry.types.output" enricher="nabu.cms.core.crud.masterDataEntry.services.list" maxOccurs="unbounded" minOccurs="0" name="entries" persister="nabu.cms.core.crud.masterDataEntry.batch.updateAll"/>
 </structure>

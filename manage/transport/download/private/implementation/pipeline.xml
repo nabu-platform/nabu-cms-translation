@@ -1,0 +1,6 @@
+<structure interface="nabu.cms.translation.manage.transport.download:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="translationExports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" enricher="nabu.cms.translation.manage.crud.translationTransport.services.list" minOccurs="0" name="transport" persister="nabu.cms.translation.manage.crud.translationTransport.batch.updateAll"/>
+    <structure collectionName="translationTransportInstances" definition="nabu.cms.translation.manage.crud.translationTransportInstance.types.output" enricher="nabu.cms.translation.manage.crud.translationTransportInstance.services.list" minOccurs="0" name="instance" persister="nabu.cms.translation.manage.crud.translationTransportInstance.batch.updateAll"/>
+</structure>

@@ -1,0 +1,12 @@
+<structure interface="nabu.cms.translation.specs.transport" name="pipeline">
+    <structure name="input" restrict="properties">
+        <structure definition="nabu.cms.translation.providers.transport.excel.excelExportConfiguration" name="properties"/>
+    </structure>
+    <structure name="output"/>
+    <field foreignKey="nabu.cms.translation.database.types.translationLanguage:id" maxOccurs="unbounded" name="languageIds" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.crud.masterDataEntry.types.output" enricher="nabu.cms.core.crud.masterDataEntry.services.list" maxOccurs="unbounded" minOccurs="0" name="usedLanguages" persister="nabu.cms.core.crud.masterDataEntry.batch.updateAll"/>
+    <structure definition="nabu.cms.translation.specs.finalizedTranslation" maxOccurs="unbounded" minOccurs="0" name="terms"/>
+    <structure definition="nabu.cms.translation.providers.transport.excel.excelRecordList" name="excel"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.crud.masterDataEntry.types.output" enricher="nabu.cms.core.crud.masterDataEntry.services.list" minOccurs="0" name="referenceLanguage" persister="nabu.cms.core.crud.masterDataEntry.batch.updateAll"/>
+    <structure collectionName="masterDataEntries" definition="nabu.cms.core.crud.masterDataEntry.types.output" enricher="nabu.cms.core.crud.masterDataEntry.services.list" minOccurs="0" name="translatedLanguage" persister="nabu.cms.core.crud.masterDataEntry.batch.updateAll"/>
+</structure>

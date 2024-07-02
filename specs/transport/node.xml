@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2023-04-20T09:01:04.447+02:00" lastModified="2023-06-07T13:23:31.667+02:00" leaf="true" version="11">
+<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2023-04-20T09:01:04.447+02:00" lastModified="2024-06-28T13:30:56.533+02:00" leaf="true" version="13">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
@@ -7,4 +7,6 @@
     <references>java.lang.String</references>
     <references>java.util.UUID</references>
     <references>java.lang.Object</references>
+    <references>java.net.URI</references>
+    <references>java.net.URI</references>
 </node>

@@ -1,0 +1,6 @@
+<structure name="excelRecord">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field label="Term" name="term" type="java.lang.String"/>
+    <field label="Reference" name="referenceLanguage" type="java.lang.String"/>
+    <field label="Translation" name="translatedLanguage" type="java.lang.String"/>
+</structure>

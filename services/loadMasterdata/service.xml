@@ -102,9 +102,9 @@
 				serviceId="nabu.cms.translation.services.loadData"
 				resultName="result5e3f3f07d60e45bc82d6de9f63ceb942"
 				temporaryMapping="true"
-				x="254"
-				y="105"
-				invocationOrder="0"
+				x="724"
+				y="103"
+				invocationOrder="2"
 				asynchronous="false"
 				recache="false">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
@@ -122,7 +122,7 @@
 					mask="false"
 					optional="false"
 					fixedValue="true">
-				<from>title</from>
+				<from>name</from>
 				<to>labelQuery</to>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
@@ -142,6 +142,66 @@
 					fixedValue="false">
 				<from>input/translationBundleId</from>
 				<to>translationBundleId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="6802e3172672424c8ff311683e88e43c"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result2fcd3d72958248f6827ebeeed385b508/last</from>
+				<to>operational</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="a41c5992e7494bdfb590dc826b90c16d"
+				serviceId="nabu.utils.Object.last"
+				resultName="result2fcd3d72958248f6827ebeeed385b508"
+				temporaryMapping="true"
+				x="418"
+				y="365"
+				invocationOrder="1"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="022c776a69c34c908b7e28a17abfe635"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>false</from>
+				<to>options[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="2a442bdc7f7a4169ae864b46164b7a18"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resulte9f8838ee353427596061a1d55e483ae/first</from>
+				<to>options[1]</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="16f8ec6a51d64e088a29613e2264fdfa"
+				serviceId="nabu.utils.Object.first"
+				resultName="resulte9f8838ee353427596061a1d55e483ae"
+				temporaryMapping="true"
+				x="18"
+				y="280"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="3cfe036634714b65b4b98879801ffb98"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>entries/operational</from>
+				<to>options</to>
 			</steps>
 		</steps>
 	</steps>

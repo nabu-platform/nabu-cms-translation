@@ -95,3 +95,11 @@ The last three roles all have "translationBundle.list" permission because by add
 
 We use webhooks to feedback information from say qlty to dev.
 When we validate, hotfix,... we can call webhooks with that information.
+
+# Indexes
+
+Unique constraint:
+
+```
+ALTER TABLE translation_terms ADD CONSTRAINT term_unique UNIQUE nulls not distinct (term, translation_bundle_id, instance_id)
+```

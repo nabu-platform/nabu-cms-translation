@@ -4,6 +4,7 @@
     <field name="started" timezone="UTC" type="java.util.Date"/>
     <field minOccurs="0" name="stopped" type="java.util.Date"/>
     <field comment="Freestyle comment for the user" minOccurs="0" name="comment" type="java.lang.String"/>
-    <field comment="Any output returned by the export service" minOccurs="0" name="transportServiceOutput" type="java.lang.String"/>
     <field comment="If it failed" minOccurs="0" name="error" type="java.lang.String"/>
+    <field comment="Optional uri" minOccurs="0" name="outputUri" type="java.net.URI"/>
+    <field comment="Optional uri" minOccurs="0" name="inputUri" type="java.net.URI"/>
 </structure>

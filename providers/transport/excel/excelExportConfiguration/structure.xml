@@ -1,0 +1,6 @@
+<structure name="excelConfiguration">
+    <field name="translatedLanguage" type="java.lang.String"/>
+    <field name="referenceLanguage" type="java.lang.String"/>
+    <field minOccurs="0" name="includeDefault" type="java.lang.Boolean"/>
+    <field minOccurs="0" name="includeDrafts" type="java.lang.Boolean"/>
+</structure>

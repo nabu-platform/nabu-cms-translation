@@ -2,7 +2,10 @@
     <structure name="input">
         <field name="name" type="java.lang.String"/>
         <field name="translationTransportId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
-        <structure definition="java.lang.Object" minOccurs="0" name="properties"/>
+        <structure collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="properties"/>
+        <field minOccurs="0" name="uri" type="java.net.URI"/>
     </structure>
-    <structure name="output"/>
+    <structure name="output">
+        <field minOccurs="0" name="uri" type="java.net.URI"/>
+    </structure>
 </structure>

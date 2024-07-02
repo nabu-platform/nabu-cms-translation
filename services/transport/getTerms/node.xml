@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-06-07T10:33:54.118+02:00" lastModified="2024-02-22T15:50:00.014+01:00" leaf="true" version="17">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-06-07T10:33:54.118+02:00" lastModified="2024-05-30T08:56:06.139+02:00" leaf="true" version="30">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
@@ -8,17 +8,24 @@
     <references>nabu.services.jdbc.Services.selectDynamic</references>
     <references>nabu.cms.translation.manage.crud.translationLanguage.services.list</references>
     <references>java.util.Date</references>
+    <references>nabu.cms.translation.database.types.translationLanguage</references>
     <references>nabu.utils.Date.now</references>
     <references>nabu.utils.Server.uuid</references>
+    <references>nabu.cms.translation.manage.crud.translationTerm.services.list</references>
+    <references>nabu.utils.List.hash</references>
     <references>java.util.UUID</references>
     <references>nabu.cms.translation.manage.crud.translationTermInstance.services.list</references>
     <references>nabu.cms.translation.specs.finalizedTranslation</references>
+    <references>nabu.utils.List.addAll</references>
     <references>nabu.cms.translation.manage.crud.translationTermInstance.types.output</references>
     <references>nabu.cms.translation.manage.crud.translationBundle.services.get</references>
     <references>nabu.cms.translation.manage.crud.translationTransport.types.output</references>
     <references>nabu.cms.translation.manage.crud.translationLanguage.types.output</references>
     <references>nabu.cms.translation.manage.crud.translationTransportTopic.services.list</references>
+    <references>nabu.utils.Map.get</references>
+    <references>java.util.Map</references>
     <references>java.lang.Boolean</references>
+    <references>java.lang.String</references>
     <references>nabu.cms.translation.manage.term.topicSql</references>
     <references>nabu.cms.translation.manage.crud.translationTransport.services.list</references>
 </node>

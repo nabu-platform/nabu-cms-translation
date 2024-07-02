@@ -1,0 +1,3 @@
+<structure name="excelRecordList">
+    <structure definition="nabu.cms.translation.providers.transport.excel.excelRecord" maxOccurs="unbounded" minOccurs="0" name="records"/>
+</structure>

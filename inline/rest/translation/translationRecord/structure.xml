@@ -2,6 +2,7 @@
     <field name="key" type="java.lang.String"/>
     <field minOccurs="0" name="label" type="java.lang.String"/>
     <field minOccurs="0" name="description" type="java.lang.String"/>
+    <field minOccurs="0" name="defaultValue" type="java.lang.String"/>
     <structure maxOccurs="unbounded" minOccurs="0" name="translations">
         <field name="language" type="java.lang.String"/>
         <field minOccurs="0" name="translation" type="java.lang.String"/>

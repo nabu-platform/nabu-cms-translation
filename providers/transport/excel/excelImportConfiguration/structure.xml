@@ -1,0 +1,4 @@
+<structure name="excelConfiguration">
+    <field name="translatedLanguage" type="java.lang.String"/>
+    <field minOccurs="0" name="verifyTranslations" type="java.lang.Boolean"/>
+</structure>
