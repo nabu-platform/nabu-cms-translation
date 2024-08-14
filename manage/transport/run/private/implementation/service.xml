@@ -84,14 +84,14 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
 			disabled="false"
 			id="827dfcbba61f45418488514617f4d3c3"
-			label="transport/requiresDataInput == true &amp;&amp; input/content/data/content == null"
+			label="transport/requiresData == true &amp;&amp; input/content/data/content == null"
 			lineNumber="5"
 			message="No data provided but it was expected"
 			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="83585b6b64e64918be2852eee7acd0ae"
-			label="transport/requiresDataInput == true"
+			label="transport/requiresData == true"
 			lineNumber="6">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
@@ -717,12 +717,12 @@
 					</steps>
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
-							id="5abe3f1f361b432398a7443e8379cc62"
+							id="fb492e1757b144f49f771b8abc1723be"
 							mask="false"
 							optional="false"
 							fixedValue="false">
 						<from>outputUri</from>
-						<to>instance/uri</to>
+						<to>instance/outputUri</to>
 					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
