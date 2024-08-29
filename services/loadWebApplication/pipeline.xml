@@ -6,13 +6,13 @@
         <field minOccurs="0" name="source" type="java.lang.String"/>
     </structure>
     <structure name="output"/>
-    <structure collectionName="nodes" definition="nabu.cms.core.types.emodel.core.Node" id="127-0-1-1--349ff93a:1578fc8f0d7:-8000:0000000000000990" name="application"/>
+    <structure collectionCrudProvider="node" collectionName="nodes" definition="nabu.cms.core.types.emodel.core.Node" id="127-0-1-1--349ff93a:1578fc8f0d7:-8000:0000000000000990" name="application"/>
     <structure definition="be.nabu.eai.module.web.application.api.TranslationKey" maxOccurs="unbounded" minOccurs="0" name="translationKeys"/>
-    <structure collectionName="masterDataCategories" definition="nabu.cms.core.crud.masterDataCategory.types.output" minOccurs="0" name="topicCategory"/>
+    <structure collectionName="masterDataCategories" definition="nabu.cms.core.crud.masterDataCategory.types.output" enricher="nabu.cms.core.crud.masterDataCategory.services.list" minOccurs="0" name="topicCategory" persister="nabu.cms.core.crud.masterDataCategory.batch.updateAll"/>
     <structure collectionName="masterDataEntries" definition="nabu.cms.core.types.emodel.core.MasterDataEntry" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011A7" maxOccurs="unbounded" name="topicEntries"/>
     <structure collectionName="masterDataEntries" definition="nabu.cms.core.types.emodel.core.MasterDataEntry" id="127-0-1-1-eb57550:15992d23a1e:-8000:00000000000011A7" name="topicEntry"/>
-    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" maxOccurs="unbounded" minOccurs="0" name="existingTopicLinks"/>
-    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" minOccurs="0" name="existingTopicLink"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" enricher="nabu.cms.translation.manage.crud.translationTermTopic.services.list" maxOccurs="unbounded" minOccurs="0" name="existingTopicLinks" persister="nabu.cms.translation.manage.crud.translationTermTopic.batch.updateAll"/>
+    <structure collectionName="translationTermTopics" definition="nabu.cms.translation.manage.crud.translationTermTopic.types.output" enricher="nabu.cms.translation.manage.crud.translationTermTopic.services.list" minOccurs="0" name="existingTopicLink" persister="nabu.cms.translation.manage.crud.translationTermTopic.batch.updateAll"/>
     <structure collectionName="translationTermTopics" definition="nabu.cms.translation.database.types.translationTermTopic" name="newTopicEntry"/>
     <structure collectionName="translationTermTopics" definition="nabu.cms.translation.database.types.translationTermTopic" maxOccurs="unbounded" minOccurs="0" name="newTopicEntries"/>
     <field maxOccurs="unbounded" minOccurs="0" name="files" type="java.lang.String"/>

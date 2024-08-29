@@ -1188,7 +1188,7 @@
 						mask="false"
 						optional="false"
 						fixedValue="false">
-					<from>existingTopicLinks[translationTermId == /existingTranslation/id]</from>
+					<from>existingTopicLinks[translationTermId == /existingTranslation/id &amp;&amp; translationTopicId == /topicEntry/id]</from>
 					<to>existingTopicLink</to>
 				</steps>
 			</steps>
