@@ -75,8 +75,8 @@
 				serviceId="nabu.cms.translation.services.transport.getTerms"
 				resultName="resultded939021ec1429988f25081d5b4ffa2"
 				temporaryMapping="true"
-				x="69"
-				y="161"
+				x="205"
+				y="40"
 				invocationOrder="0"
 				asynchronous="false"
 				recache="false">
@@ -450,6 +450,54 @@
 						fixedValue="false">
 					<from>date</from>
 					<to>existingTranslation/verified</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="22b5ed3d0e9a46ddab171b79743d1817"
+						serviceId="nabu.cms.translation.manage.term.deprecateActiveByTerm"
+						resultName="result6092dbaef96c42a0abc5074a09a06d7f"
+						temporaryMapping="true"
+						x="270"
+						y="103"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="18d33992db3d40f398a7c75ecff7b985"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>date</from>
+						<to>parameters[0]/timestamp</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="d517f27dba464353bcdcb2f6bfbc7d1b"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>term/id</from>
+						<to>parameters[0]/translationTermId[0]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="47b421f34b9641ac9a020029c52fcec2"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>existingTranslation/id</from>
+						<to>parameters[0]/notId[0]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="56ff288dce8b4bb88a79a1c8290d5933"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>existingTranslation/languageId</from>
+						<to>parameters[0]/languageId[0]</to>
+					</steps>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"

@@ -1,0 +1,5 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sql>select translation_term_id, language_id, total from (
+	select translation_term_id, language_id, count(*) as total from translation_term_instances where verified is not null and deprecated is null group by translation_term_id, language_id
+) where total &gt;= 2</sql>
+</jdbcService>

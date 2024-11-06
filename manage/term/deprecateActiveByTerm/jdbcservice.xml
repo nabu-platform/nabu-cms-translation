@@ -1,0 +1,6 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sql>update ~translation_term_instances set deprecated = :timestamp, modified = :timestamp 
+where translation_term_id = any(:translationTermId) and deprecated is null and verified is not null
+	and (:notId is null or id &lt;&gt; all(:notId))
+	and (:languageId is null or language_id = any(:languageId))</sql>
+</jdbcService>

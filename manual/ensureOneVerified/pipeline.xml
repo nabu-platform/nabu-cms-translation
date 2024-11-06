@@ -1,0 +1,8 @@
+<structure name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.cms.translation.utils.selectedMultipleVerified.results" maxOccurs="unbounded" minOccurs="0" name="doubles"/>
+    <structure collectionName="translationTermInstances" definition="nabu.cms.translation.manage.crud.translationTermInstance.types.output" enricher="nabu.cms.translation.manage.crud.translationTermInstance.services.list" maxOccurs="unbounded" minOccurs="0" name="translations" persister="nabu.cms.translation.manage.crud.translationTermInstance.batch.updateAll"/>
+    <field name="totalRowCount" nillable="false" type="java.lang.Long"/>
+    <field minOccurs="0" name="date" type="java.util.Date"/>
+</structure>

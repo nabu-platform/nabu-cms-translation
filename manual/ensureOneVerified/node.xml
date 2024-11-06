@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2024-10-08T11:08:57.633+02:00" lastModified="2024-10-08T13:07:29.165+02:00" leaf="true" version="14">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.cms.translation.manage.term.deprecateActiveByTerm</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.types.output</references>
+    <references>java.lang.Long</references>
+    <references>java.util.Date</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.cms.translation.utils.selectedMultipleVerified.results</references>
+    <references>nabu.cms.translation.manage.crud.translationTermInstance.services.list</references>
+    <references>nabu.cms.translation.utils.selectedMultipleVerified</references>
+</node>

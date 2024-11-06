@@ -100,7 +100,7 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="830ed0a847e0450db3b0e421100ce278"
-			label="instance/uri != null"
+			label="instance/outputUri"
 			lineNumber="5">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
@@ -115,11 +115,11 @@
 				recache="false">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
-					id="870de63f6d7248758fab75c6fbee052c"
+					id="e35574bbf4814cc2ac769cf2783b108e"
 					mask="false"
 					optional="false"
 					fixedValue="false">
-				<from>instance/uri</from>
+				<from>instance/outputUri</from>
 				<to>uri</to>
 			</steps>
 		</steps>
@@ -145,11 +145,11 @@
 				recache="false">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
-					id="be7697cc0ab04d848e9b4a3a87344ced"
+					id="53bb4c280764450098d8d75a269cd592"
 					mask="false"
 					optional="false"
 					fixedValue="false">
-				<from>instance/uri</from>
+				<from>instance/outputUri</from>
 				<to>uri</to>
 			</steps>
 		</steps>
