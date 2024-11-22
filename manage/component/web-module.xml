@@ -17,4 +17,5 @@
     <webFragments>nabu.cms.translation.manage.crud.translationLanguage.services.update</webFragments>
     <webFragments>nabu.cms.translation.manage.transport.component</webFragments>
     <webFragments>nabu.cms.translation.manage.term.verify</webFragments>
+    <audience>MANAGER</audience>
 </webModule>
