@@ -312,7 +312,7 @@
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-			disabled="false"
+			disabled="true"
 			id="2ba9e1971e7b4d2981b3374732cbde27"
 			lineNumber="11">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
@@ -416,7 +416,7 @@
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-			disabled="false"
+			disabled="true"
 			id="1c5b82233dba43ef92c6dbea3fb87bd8"
 			label="terms"
 			lineNumber="12">
@@ -470,7 +470,7 @@
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.For"
-			disabled="false"
+			disabled="true"
 			id="98525a63666544b4bc8b59c2b603bc9c"
 			label="translations"
 			lineNumber="13"

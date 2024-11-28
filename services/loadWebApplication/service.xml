@@ -853,11 +853,19 @@
 				<to>termString</to>
 			</steps>
 		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+				disabled="false"
+				id="637dbd8bb74346b593849825f9b43db7"
+				label="termString == &quot;&quot; || termString == null"
+				lineNumber="22">
+			<count>1</count>
+			<continueExecution>true</continueExecution>
+		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				comment="Get existing"
 				disabled="false"
 				id="812b7c815b4348f5bea77d338e7d5310"
-				lineNumber="22">
+				lineNumber="23">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
 					id="253b9bdff58242de8a7d76639a561b34"
@@ -872,16 +880,16 @@
 				disabled="false"
 				id="9c7c4c645f794d80a1d06bd032159d88"
 				label="!existingTranslation"
-				lineNumber="23">
+				lineNumber="24">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 					disabled="false"
 					id="14b88e31f7354a698c8ec87089ca42bc"
-					lineNumber="24">
+					lineNumber="25">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						disabled="false"
 						id="5a98b47dc9684a0fa48bbea87a559ba7"
 						label="termString == translationKey/value"
-						lineNumber="25">
+						lineNumber="26">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
 							disabled="false"
 							id="4fdfc0b503624bd7bc006752536099be"
@@ -890,7 +898,7 @@
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						disabled="false"
 						id="a6d6049f719e44fa86c7406b0cb1b1eb"
-						lineNumber="26">
+						lineNumber="27">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
 							id="7c846fb7cc724eb3850b00ffb4846764"
@@ -905,7 +913,7 @@
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
 					id="d13b686b52384494a9b105beba494cb5"
-					lineNumber="27">
+					lineNumber="28">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="1a368dab68f8412ba672b4f8095989bb"
@@ -987,7 +995,7 @@
 				comment="Build the applicable topics"
 				disabled="false"
 				id="f9fbb6f6081b4e71849213b076ac7fc4"
-				lineNumber="28">
+				lineNumber="29">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
 					id="fa370b14b4af480d9de234483eb4151e"
@@ -1002,7 +1010,7 @@
 				disabled="false"
 				id="5a381b0caef0434a8fff737087cbafa7"
 				label="translationKey/key != null"
-				lineNumber="29">
+				lineNumber="30">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 					disabled="false"
 					id="87044cea89fd419cb3a0fccbbadc7444"
@@ -1047,13 +1055,13 @@
 				comment="Make a topic for each page"
 				disabled="false"
 				id="e4d35b5557d84104aff307497dc4ab68"
-				lineNumber="30"
+				lineNumber="31"
 				variable="file"
 				into="applicableTopics">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
 					id="316f1eb0a0ff4d039022283d419e870f"
-					lineNumber="31">
+					lineNumber="32">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="4b471df726c64199834d4c8669003cc1"
@@ -1117,7 +1125,7 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				disabled="false"
 				id="0c66b67c611d4c6fba9aaf5b18dffffd"
-				lineNumber="32">
+				lineNumber="33">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 					disabled="false"
 					id="c5e78a565de944cca779235cce28ead6"
@@ -1152,13 +1160,13 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.For"
 				disabled="false"
 				id="3e6f7f1902444e948f1e779fa5316985"
-				lineNumber="33"
+				lineNumber="34"
 				variable="applicableTopic">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Get the applicable topic"
 					disabled="false"
 					id="a3ce7bc30265420696778fd8cbaf6b20"
-					lineNumber="34">
+					lineNumber="35">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
 						id="3def6ad958f047078cd5c1ceaa041f2b"
@@ -1173,7 +1181,7 @@
 					disabled="false"
 					id="abce4513c02c41959e0322566754cde9"
 					label="!topicEntry"
-					lineNumber="35">
+					lineNumber="36">
 				<count>1</count>
 				<continueExecution>true</continueExecution>
 			</steps>
@@ -1181,7 +1189,7 @@
 					comment="Check to see if we already have a topic link"
 					disabled="false"
 					id="0e283801d435436495926f5c64c25ce8"
-					lineNumber="36">
+					lineNumber="37">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
 						id="d4e1fed4edb54e8a832bb92d9b8155fa"
@@ -1196,7 +1204,7 @@
 					disabled="false"
 					id="c4dba14e4820429ea8f76ead52921121"
 					label="!existingTopicLink"
-					lineNumber="37">
+					lineNumber="38">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="3e79184c95a44eb1a998d61202e887a6"
