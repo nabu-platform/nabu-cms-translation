@@ -1,7 +1,7 @@
 <structure name="pipeline">
     <structure name="input">
         <field name="translationBundleId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
-        <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" maxOccurs="unbounded" minOccurs="0" name="objects"/>
+        <structure collectionName="teamsTemplates" definition="java.lang.Object" maxOccurs="unbounded" minOccurs="0" name="objects"/>
         <field comment="The fields to translate" maxOccurs="unbounded" minOccurs="0" name="fields" type="java.lang.String"/>
         <field comment="Automatically link them to certain topics" maxOccurs="unbounded" minOccurs="0" name="topics" type="java.lang.String"/>
         <field comment="A query that can extract a good label for the given field" minOccurs="0" name="labelQuery" type="java.lang.String"/>

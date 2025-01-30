@@ -549,15 +549,6 @@
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="66f0f596bc594abcb22b34f132afeb76"
-						mask="false"
-						optional="false"
-						fixedValue="true">
-					<from>true</from>
-					<to>translationTerms[0]/operational</to>
-				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
 						id="7eac53a4c5cb474e9f8124eeadf46ed3"
 						mask="false"
 						optional="false"
@@ -573,6 +564,15 @@
 						fixedValue="false">
 					<from>input/defaultLanguageId</from>
 					<to>translationTerms[0]/translationLanguageId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="44eec485998143a1b3e3dcf5aba4db75"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/operational</from>
+					<to>translationTerms[0]/operational</to>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
