@@ -185,6 +185,13 @@
 				<from>input/query/searchLanguageIds</from>
 				<to>languageIds</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="ab19ad4cd9c04c8da804f992a6cf2c22"
+					fixedValue="false">
+				<from>input/query/hasNoTranslationForLanguageId</from>
+				<to>hasNoTranslationForLanguageId</to>
+			</steps>
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"

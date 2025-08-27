@@ -12,7 +12,7 @@
     <field comment="You can lock a term to prevent further translation" minOccurs="0" name="locked" timezone="UTC" type="java.util.Date"/>
     <field comment="You can deprecate a term for future removal" minOccurs="0" name="deprecated" timezone="UTC" type="java.util.Date"/>
     <field comment="When you actually delete it" minOccurs="0" name="inactivated" timezone="UTC" type="java.util.Date"/>
-    <field comment="for context" foreignKey="nabu.cms.attachment.types.model.attachments.NodeAttachment:id" minOccurs="0" name="attachmentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="for context" minOccurs="0" name="attachmentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
     <field foreignKey="nabu.cms.core.types.emodel.core.MasterDataEntry:id" minOccurs="0" name="translationTermTypeId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
     <field comment="For instance a masterdata id to indicate this is a translation for that. Or an operational instance of something like faq." minOccurs="0" name="instanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
     <field comment="Whether or not this is an operational translation. If operationl, you can use the context id to store any identifier you need." name="operational" type="java.lang.Boolean"/>

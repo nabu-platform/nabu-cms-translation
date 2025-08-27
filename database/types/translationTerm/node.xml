@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2022-12-05T08:45:53.768+01:00" lastModified="2023-06-07T16:01:09.794+02:00" leaf="true" version="35">
-    <environmentId>apollo</environmentId>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2022-12-05T08:45:53.768+01:00" lastModified="2025-08-12T16:43:03.023+02:00" leaf="true" version="36">
+    <environmentId>ares</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
@@ -10,7 +10,6 @@
     <references>nabu.cms.translation.database.types.translationBundle</references>
     <references>nabu.cms.translation.database.types.translationTerm</references>
     <references>nabu.cms.translation.database.types.translationEnvironment</references>
-    <references>nabu.cms.attachment.types.model.attachments.NodeAttachment</references>
     <references>nabu.cms.core.types.emodel.core.MasterDataEntry</references>
     <references>java.lang.Boolean</references>
     <references>nabu.cms.translation.database.types.translationLanguage</references>

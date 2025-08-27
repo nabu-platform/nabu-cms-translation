@@ -206,6 +206,13 @@
 					<from>UTF-8</from>
 					<to>charset</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="7e39a97085344f928df8ee949a1d77e7"
+						fixedValue="true">
+					<from>true</from>
+					<to>ignoreUndefinedFields</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 					disabled="false"

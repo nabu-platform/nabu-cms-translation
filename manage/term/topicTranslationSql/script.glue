@@ -2,6 +2,7 @@ uuid [] topicIds ?= null
 uuid translationBundleId ?= null
 string q ?= null
 uuid [] languageIds ?= null
+uuid hasNoTranslationForLanguageId ?= null
 
 @return
 string sql = "select distinct * from ~translation_terms tt join ~translation_bundles tb on tb.id = tt.translation_bundle_id and tb.id='" + translationBundleId + "'"
@@ -10,6 +11,9 @@ string sql = "select distinct * from ~translation_terms tt join ~translation_bun
 for (topicId : topicIds)
 	sql = sql + " join ~translation_term_topics ttt" + $index + " on ttt" + $index + ".translation_term_id = tt.id and ttt" + $index + ".translation_topic_id = '" + topicId + "'"
 	
+if (hasNoTranslationForLanguageId != null)
+	sql = sql + " left outer join ~translation_term_instances tti on tti.translation_term_id = tt.id and tti.language_id = '" + hasNoTranslationForLanguageId + "' and tti.verified is null"
+
 where = ""
 
 if (q != null)
@@ -22,5 +26,8 @@ if (q != null)
 	
 	@return
 	be.nabu.libs.types.api.KeyValuePair [] pairs = series(structure(key: 'q', value: q))
+	
+	if (hasNoTranslationForLanguageId != null)
+		where = where + " and tti.id is null"
 	
 sql = sql + where

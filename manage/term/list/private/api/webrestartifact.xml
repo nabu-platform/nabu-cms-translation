@@ -2,7 +2,7 @@
 <restInterface>
     <method>GET</method>
     <path>/translationBundle/{bundleId}/translationTerm</path>
-    <queryParameters>limit, offset, orderBy, q, languageIds, searchLanguageIds, topicIds</queryParameters>
+    <queryParameters>limit, offset, orderBy, q, languageIds, searchLanguageIds, topicIds, hasNoTranslationForLanguageId</queryParameters>
     <role>$user</role>
     <permissionAction>translationBundle.list</permissionAction>
     <permissionContext>=input/path/bundleId</permissionContext>
@@ -11,6 +11,7 @@
     <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
     <useGlobalPermissionContext>false</useGlobalPermissionContext>
     <output>nabu.cms.translation.manage.term.termOutputList</output>
+    <deviceBestEffort>false</deviceBestEffort>
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>
     <geoPosition>false</geoPosition>
@@ -35,4 +36,6 @@
     <captureSuccessful>false</captureSuccessful>
     <limitedToInterface>false</limitedToInterface>
     <allowExplicitResponseCode>false</allowExplicitResponseCode>
+    <stubbed>false</stubbed>
+    <clusterLock>false</clusterLock>
 </restInterface>

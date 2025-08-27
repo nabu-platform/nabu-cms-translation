@@ -1,8 +1,8 @@
 <structure interface="nabu.cms.translation.manage.transport.list:api" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
-    <structure collectionName="translationExportTopics" definition="nabu.cms.translation.manage.crud.translationTransportTopic.types.output" maxOccurs="unbounded" minOccurs="0" name="topics"/>
+    <structure collectionName="translationExportTopics" definition="nabu.cms.translation.manage.crud.translationTransportTopic.types.output" enricher="nabu.cms.translation.manage.crud.translationTransportTopic.services.list" maxOccurs="unbounded" minOccurs="0" name="topics" persister="nabu.cms.translation.manage.crud.translationTransportTopic.batch.updateAll"/>
     <structure definition="nabu.web.core.manage.reflection.propertyList" name="propertyList"/>
-    <structure collectionName="translationExports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <structure collectionName="translationExports" definition="nabu.cms.translation.manage.crud.translationTransport.types.output" enricher="nabu.cms.translation.manage.crud.translationTransport.services.list" maxOccurs="unbounded" minOccurs="0" name="results" persister="nabu.cms.translation.manage.crud.translationTransport.batch.updateAll"/>
     <field comment="Any configurable properties for this service" minOccurs="0" name="transportServiceProperties" type="java.lang.String"/>
 </structure>
