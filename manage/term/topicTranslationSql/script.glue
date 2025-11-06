@@ -12,7 +12,7 @@ for (topicId : topicIds)
 	sql = sql + " join ~translation_term_topics ttt" + $index + " on ttt" + $index + ".translation_term_id = tt.id and ttt" + $index + ".translation_topic_id = '" + topicId + "'"
 	
 if (hasNoTranslationForLanguageId != null)
-	sql = sql + " left outer join ~translation_term_instances tti on tti.translation_term_id = tt.id and tti.language_id = '" + hasNoTranslationForLanguageId + "' and tti.verified is null"
+	sql = sql + " left outer join ~translation_term_instances tti on tti.translation_term_id = tt.id and tti.language_id = '" + hasNoTranslationForLanguageId + "' and tti.verified is not null and tti.deprecated is null"
 
 where = ""
 
@@ -27,7 +27,10 @@ if (q != null)
 	@return
 	be.nabu.libs.types.api.KeyValuePair [] pairs = series(structure(key: 'q', value: q))
 	
-	if (hasNoTranslationForLanguageId != null)
+if (hasNoTranslationForLanguageId != null)
+	if (where == "")
+		where = " where tti.id is null"
+	else 
 		where = where + " and tti.id is null"
 	
 sql = sql + where
